@@ -26,3 +26,7 @@ const concatenateArrays = (...arrays) => {
         return acc.concat(current);
     }, []);
 };
+const getPopularCourses = (courses, minStudents) => {
+    return courses.filter((course) => course.isPublished === true &&
+        course.students >= minStudents);
+};
