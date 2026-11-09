@@ -68,10 +68,10 @@ const getPopularCourses = (
 
 
 
-function pluckValues<T, K extends keyof T>(
+const pluckValues = <T, K extends keyof T>(
   items: T[],
   key: K
-): T[K][] {
+): T[K][] => {
   return items.map((item) => item[key]);
 }
 
@@ -107,6 +107,22 @@ class Manager extends Employee {
   }
 }
 
-// Sample Input
+
 const manager = new Manager("Alice", 50000, "Engineering");
+
+
+//8
+
+const validateAgeAsync = (age: number): Promise<string> => {
+  return new Promise((resolve, reject) => {
+    if (age >= 18) {
+      setTimeout(() => {
+        resolve("Access Granted");
+      }, 1000);
+    } else {
+      reject(new Error("Access Denied: Must be 18 or older"));
+    }
+  });
+}
+
 
