@@ -34,5 +34,15 @@ const formatCoordinate = (
 }
 
 
+// 4
+
+
+
+const concatenateArrays = <T>(...arrays: T[][]): T[] => {
+  return arrays.reduce((acc, current) => {
+    return acc.concat(current);
+  }, [] as T[]);
+
+}
 
 

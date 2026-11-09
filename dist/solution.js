@@ -20,3 +20,9 @@ const formatCoordinate = (coordinate) => {
     const [latitude, longitude, locationName] = coordinate;
     return `Location: ${locationName} (${latitude}, ${longitude})`;
 };
+// 4
+const concatenateArrays = (...arrays) => {
+    return arrays.reduce((acc, current) => {
+        return acc.concat(current);
+    }, []);
+};
