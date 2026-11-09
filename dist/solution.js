@@ -15,3 +15,8 @@ const processInput = (value) => {
         return value ? "Active" : "Inactive";
     }
 };
+// 3
+const formatCoordinate = (coordinate) => {
+    const [latitude, longitude, locationName] = coordinate;
+    return `Location: ${locationName} (${latitude}, ${longitude})`;
+};
