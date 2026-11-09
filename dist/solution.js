@@ -34,3 +34,31 @@ const getPopularCourses = (courses, minStudents) => {
 function pluckValues(items, key) {
     return items.map((item) => item[key]);
 }
+//7
+class Employee {
+    name;
+    baseSalary;
+    constructor(name, baseSalary) {
+        this.name = name;
+        this.baseSalary = baseSalary;
+    }
+    getDetails() {
+        return `Employee: ${this.name}, Base Salary: ${this.baseSalary}`;
+    }
+}
+class Manager extends Employee {
+    department;
+    constructor(name, baseSalary, department) {
+        super(name, baseSalary);
+        this.department = department;
+    }
+    getRoleInfo() {
+        return `Manager of ${this.department}: ${this.name}`;
+    }
+}
+// Sample Calls & Verification:
+const manager = new Manager("Alice", 50000, "Engineering");
+console.log(manager.getDetails());
+// Output: "Employee: Alice, Base Salary: 50000"
+console.log(manager.getRoleInfo());
+// Output: "Manager of Engineering: Alice"
