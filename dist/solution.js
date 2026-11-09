@@ -30,3 +30,7 @@ const getPopularCourses = (courses, minStudents) => {
     return courses.filter((course) => course.isPublished === true &&
         course.students >= minStudents);
 };
+//6
+function pluckValues(items, key) {
+    return items.map((item) => item[key]);
+}
